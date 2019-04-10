@@ -34,6 +34,8 @@ class TodosController {
   }
 
   async createTodo(req, res) {
+    console.log('entra');
+    console.log(req.body);
     let newTodo = new Todo(req.body);
     if (!req.body.title) {
       return res.status(400).send({
